@@ -1,0 +1,17 @@
+.midpoint-scene {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, #0d0709 0%, #050304 75%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10%;
+  text-align: center;
+}
+
+.midpoint-line {
+  font-size: clamp(1.3rem, 4.4vw, 2.3rem);
+  max-width: 640px;
+  line-height: 1.6;
+  transition: opacity 0.15s linear, filter 0.15s linear;
+}

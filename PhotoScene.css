@@ -1,0 +1,97 @@
+.photo-scene {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: var(--c-black);
+  transition: opacity 0.05s linear;
+}
+
+.photo-scene-media {
+  position: absolute;
+  inset: 0;
+  transition: opacity 1.2s ease;
+}
+
+.photo-scene-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(32px) brightness(0.55) saturate(1.05);
+  transform: scale(1.2);
+  opacity: 0.55;
+}
+
+.photo-scene-frame {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4vh 4vw;
+}
+
+.photo-scene-fg {
+  will-change: transform, filter;
+  transform-origin: center;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.65);
+}
+
+.photo-scene-fg.fit-contain {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.photo-scene-fg.fit-cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: none;
+}
+
+.special-golden-light {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  background: radial-gradient(circle at 50% 50%, rgba(242, 219, 160, 0.5), rgba(7, 5, 10, 0.95) 70%);
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.photo-scene-tint {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 5, 10, 0.15) 0%, rgba(7, 5, 10, 0.05) 40%, rgba(7, 5, 10, 0.55) 100%);
+  mix-blend-mode: multiply;
+}
+
+.photo-scene-text-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 9%;
+  display: flex;
+  justify-content: center;
+  padding: 0 8%;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.scene-lines {
+  text-align: center;
+  max-width: 680px;
+}
+
+.scene-line {
+  font-size: clamp(1.15rem, 3.6vw, 1.9rem);
+  line-height: 1.5;
+  margin: 0;
+  transition: opacity 0.15s linear, filter 0.15s linear;
+}

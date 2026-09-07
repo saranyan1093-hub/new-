@@ -1,0 +1,27 @@
+.buildup-scene {
+  position: absolute;
+  inset: 0;
+  background: #050304;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.buildup-glow {
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(circle at 50% 50%, rgba(217, 178, 107, 0.25), transparent 60%);
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.buildup-line {
+  position: relative;
+  font-size: clamp(1.3rem, 4.6vw, 2.4rem);
+  max-width: 640px;
+  line-height: 1.6;
+  transition: opacity 0.15s linear, filter 0.15s linear;
+}

@@ -1,0 +1,95 @@
+.reveal-scene {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #030203;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reveal-light {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(242, 219, 160, 0.9) 0%, rgba(217, 178, 107, 0.45) 35%, rgba(231, 182, 189, 0.15) 60%, transparent 75%);
+  filter: blur(6px);
+  transition: transform 0.1s linear, opacity 0.1s linear;
+}
+
+.reveal-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.reveal-particle {
+  position: absolute;
+  bottom: -10px;
+  border-radius: 50%;
+  animation-name: particleRise;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+
+.reveal-particle.gold {
+  background: radial-gradient(circle, var(--c-gold-light), transparent 70%);
+  box-shadow: 0 0 6px rgba(242, 219, 160, 0.7);
+}
+
+.reveal-particle.rose {
+  background: radial-gradient(circle, var(--c-rose), transparent 70%);
+  box-shadow: 0 0 6px rgba(231, 182, 189, 0.6);
+}
+
+@keyframes particleRise {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  15% { opacity: 0.9; }
+  100% { transform: translateY(-100vh) translateX(15px); opacity: 0; }
+}
+
+.reveal-text-stack {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.reveal-date {
+  position: absolute;
+  top: -70px;
+  font-family: var(--font-alt);
+  letter-spacing: 0.35em;
+  color: var(--c-rose);
+  font-size: clamp(0.8rem, 2.2vw, 1rem);
+  transition: opacity 1s ease;
+}
+
+.reveal-happy {
+  position: absolute;
+  top: -30px;
+  font-size: clamp(1.6rem, 6vw, 2.8rem);
+  letter-spacing: 0.12em;
+  transition: opacity 1s ease;
+  text-transform: lowercase;
+}
+
+.reveal-name {
+  font-size: clamp(2.6rem, 10vw, 5.2rem);
+  margin: 0;
+  transition: opacity 1.2s ease, transform 1.2s ease, text-shadow 0.3s ease;
+}
+
+.reveal-heart {
+  position: absolute;
+  bottom: -60px;
+  font-size: clamp(1.6rem, 5vw, 2.4rem);
+  transition: opacity 1.2s ease;
+}

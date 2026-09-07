@@ -1,0 +1,16 @@
+.loading-screen {
+  position: absolute;
+  inset: 0;
+  background: var(--c-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-text {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  color: var(--c-rose);
+  opacity: 0.85;
+  letter-spacing: 0.04em;
+  animation: textFadeIn 0.8s ease;
+}

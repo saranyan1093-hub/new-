@@ -1,0 +1,14 @@
+.word-reveal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4em;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.word-reveal-word {
+  font-size: clamp(1.6rem, 5vw, 3rem);
+  transition: opacity 0.1s linear, filter 0.1s linear, transform 0.1s linear;
+  white-space: nowrap;
+}

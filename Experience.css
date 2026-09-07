@@ -1,0 +1,11 @@
+.experience-root {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: var(--c-black);
+}
+
+.scene-stage {
+  position: absolute;
+  inset: 0;
+}
